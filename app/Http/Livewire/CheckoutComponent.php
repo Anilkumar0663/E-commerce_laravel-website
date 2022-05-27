@@ -252,7 +252,7 @@ class CheckoutComponent extends Component
                     if($charge['status'] == 'succeeded')
                     {
                         $this->makeTransaction($order->id,'approved');
-                        $this->resetCart();
+                        $this->resetCard();
                     }
                     else
                     {
