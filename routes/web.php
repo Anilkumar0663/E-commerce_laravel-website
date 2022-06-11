@@ -130,11 +130,11 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function()
     Route::get('/admin/slider/add',AdminAddHomeSliderComponent::class)->name('admin.addhomeslider'); 
     Route::get('/admin/slider/edit{slider_id}',AdminEditHomeSliderComponent::class)->name('admin.edithomeslider'); 
    
-    //product category 
+    // product category 
     Route::get('/admin/home-categories',AdminHomeCategoryComponent::class)->name('admin.homecategory');
 
     Route::get('/admin/sale',AdminSaleComponent::class)->name('admin.sale');
-
+    // for coupon
     Route::get("/admin/coupon",AdminCouponComponent::class)->name('admin.coupons');
     Route::get("/admin/coupon/add",AdminAddCouponComponent::class)->name('admin.addcoupon');
     Route::get("/admin/coupon/edit/{coupon_id}",AdminEditCouponComponent::class)->name('admin.editcoupon');
@@ -142,13 +142,13 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function()
     Route::get('/admin/orders',AdminOrderComponent::class)->name('admin.order');
     Route::get('/admin/orders/{order_id}',AdminOrderDetailComponent::class)->name('admin.orderdetail');
 
-    //contact
+    // contact
     Route::get('/admin/contact-us',AdminContactComponent::class)->name('admin.contact');
 
     // setting
     Route::get('/admin/settings',AdminSettingComponent::class)->name('admin.setting');
 
-    //Attributes
+    // Attributes
     Route::get('/admin/attributes',AdminAttributesComponent::class)->name('admin.attributes');
     Route::get('/admin/attributes/add',AdminAddAttributesComponent::class)->name('admin.add_attributes');
     Route::get('/admin/attributes/edit/{attribute_id}',AdminEditAttributesComponent::class)->name('admin.edit_attributes');
